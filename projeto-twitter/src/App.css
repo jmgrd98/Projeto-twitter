@@ -17,10 +17,6 @@ aside{
   padding: 50px;
 }
 
-aside nav{
-
-}
-
 main{
   background-color: blueviolet;
   height: 100vh;
@@ -28,7 +24,7 @@ main{
   padding: 50px;
 }
 
-form{
+#card{
   background-color: white;
   padding: 20px;
   border-radius: 20px;

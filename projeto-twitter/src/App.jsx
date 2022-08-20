@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import {Forms} from './components/Forms'
+import {Forms} from './components/forms/Forms'
 
 function App() {
 
@@ -35,8 +35,12 @@ function App() {
 
       <main>
 
+    <div id="card">
+
       <Forms />
 
+      <button type="submit" onClick={handleAddUser}>Próximo</button>
+      </div>
       </main>
 
       </body>
