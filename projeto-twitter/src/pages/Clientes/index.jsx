@@ -3,20 +3,15 @@ import './index.css';
 import Card from '../../components/cards';
 
 function Clientes() {
-
-  const [userNome, setUserNome] = useState('')
-  const [userSobrenome, setUserSobrenome] = useState('')
-  const [userEmail, setUserEmail] = useState('')
-  const [userTelefone, setUserTelefone] = useState('')
   const [user, setUser] = useState([])
 
-  function AddUser(event){
+  function handleAddUser(event){
     event.preventDefault()
     const newUser = {
-      nome: userNome,
-      sobrenome: userSobrenome,
-      email: userEmail,
-      telefone: userTelefone
+      nome: localStorage.getItem('Nome'),
+      sobrenome: localStorage.getItem('Sobrenome'),
+      email: localStorage.getItem('Email'),
+      telefone: localStorage.getItem('Telefone')
     }
     setUser(prevState => [...prevState, newUser])
   }

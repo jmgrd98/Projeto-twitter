@@ -4,19 +4,15 @@ import {Input} from '../../components/inputs/Input'
 
 function Cadastrar() {
 
-  const [userNome, setUserNome] = useState('')
-  const [userSobrenome, setUserSobrenome] = useState('')
-  const [userEmail, setUserEmail] = useState('')
-  const [userTelefone, setUserTelefone] = useState('')
   const [user, setUser] = useState([])
 
   function AddUser(event){
     event.preventDefault()
     const newUser = {
-      nome: userNome,
-      sobrenome: userSobrenome,
-      email: userEmail,
-      telefone: userTelefone
+      nome: localStorage.getItem('Nome'),
+      sobrenome: localStorage.getItem('Sobrenome'),
+      email: localStorage.getItem('Email'),
+      telefone: localStorage.getItem('Telefone')
     }
     setUser(prevState => [...prevState, newUser])
   }
@@ -53,7 +49,7 @@ function Cadastrar() {
       <Input placeholder="Email"/>
       <Input placeholder="Telefone"/>
     
-      <button type="submit" onClick={Alert}>Próximo</button>
+      <button type="submit" onClick={Alert} onClick={AddUser}>Próximo</button>
 
     </form>
 
