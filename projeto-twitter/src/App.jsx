@@ -10,7 +10,8 @@ function App() {
   const [userTelefone, setUserTelefone] = useState('')
   const [user, setUser] = useState([])
 
-  function handleAddUser(){
+  function AddUser(event){
+    event.preventDefault()
     const newUser = {
       nome: userNome,
       sobrenome: userSobrenome,
@@ -37,17 +38,20 @@ function App() {
 
     <div id="card">
 
-    <form action="" method="get">
+    <form action="" method="get" onSubmit={AddUser}>
 
       <h1>Cadastrar</h1>
-      <Input />
-      <Input />
-      <Input />
-      <Input />
+
+    
+      <Input placeholder="Nome"/>
+      <Input placeholder="Sobrenome"/>
+      <Input placeholder="Email"/>
+      <Input placeholder="Telefone"/>
+    
+      <button type="submit">Próximo</button>
 
     </form>
 
-      <button type="submit" onClick={handleAddUser}>Próximo</button>
       </div>
       </main>
 
