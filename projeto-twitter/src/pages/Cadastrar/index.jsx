@@ -21,6 +21,11 @@ function Cadastrar() {
     setUser(prevState => [...prevState, newUser])
   }
 
+  function Alert(e){
+    e.preventDefault()
+    alert('Usuário cadastrado com sucesso!')
+  }
+
   return (
     <div className="App">
 
@@ -48,7 +53,7 @@ function Cadastrar() {
       <Input placeholder="Email"/>
       <Input placeholder="Telefone"/>
     
-      <button type="submit">Próximo</button>
+      <button type="submit" onClick={Alert}>Próximo</button>
 
     </form>
 

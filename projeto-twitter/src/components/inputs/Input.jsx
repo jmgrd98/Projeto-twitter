@@ -8,7 +8,7 @@ export function Input(props){
 
 return(
 
-      <input type="text" onChange={e => setInput(e.target.value)} placeholder={props.placeholder}/>
+      <input type="text" onChange={e => localStorage.setItem(props.placeholder, e.target.value)} placeholder={props.placeholder}/>
 
 )
 }
