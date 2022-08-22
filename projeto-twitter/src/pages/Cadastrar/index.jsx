@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './index.css';
 import {AddCard} from '../../components/cards/index'
-import {Forms1, Forms2, Forms3} from '../../components/forms'
+import {Forms} from '../../components/forms'
 
 function Cadastrar() {
 
@@ -44,9 +44,7 @@ function Cadastrar() {
 
       <h1>Cadastrar</h1>
 
-    <Forms1/>
-    <Forms2/>
-    <Forms3/>
+    <Forms/>
     
 
       </div>
