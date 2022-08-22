@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './index.css';
 import Card from '../../components/cards';
 
@@ -6,6 +6,8 @@ import Card from '../../components/cards';
 function Clientes() {
   const [user, setUser] = useState([])
   const [card, setCard] = useState([])
+
+  const [items, setItems] = useState([]);
 
   function AddCard(e){
     e.preventDefault()
@@ -20,9 +22,20 @@ function Clientes() {
         nascimento: localStorage.getItem('Nascimento'),
         cpf: localStorage.getItem('CPF'),
         renda: localStorage.getItem('Renda Mensal')
-    }
-    setCard(prevState => [...prevState, newCard])
-}
+      }
+
+  useEffect(() => {
+  const card = JSON.parse(localStorage.getItem('Nome'));
+  if (card) {
+   setCard(prevstate => [...prevstate, newCard]);
+  }
+  }, [newCard]);
+  }
+
+
+
+  
+
 
   return (
     <div className="App">
