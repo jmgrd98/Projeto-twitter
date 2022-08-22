@@ -3,7 +3,6 @@ import './Input.css'
 
 export function Input(props){
 
-
   const [input, setInput] = useState('')
 
 return(

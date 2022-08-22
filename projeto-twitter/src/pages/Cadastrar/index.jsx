@@ -1,26 +1,29 @@
 import { useState } from 'react';
 import './index.css';
-import {Input} from '../../components/inputs/Input'
+import {AddCard} from '../../components/cards/index'
+import {Forms1, Forms2, Forms3} from '../../components/forms'
 
 function Cadastrar() {
 
-  const [user, setUser] = useState([])
+    const[card, setCard] = useState([])
 
-  function AddUser(event){
-    event.preventDefault()
-    const newUser = {
-      nome: localStorage.getItem('Nome'),
-      sobrenome: localStorage.getItem('Sobrenome'),
-      email: localStorage.getItem('Email'),
-      telefone: localStorage.getItem('Telefone')
-    }
-    setUser(prevState => [...prevState, newUser])
-  }
-
-  function Alert(e){
-    e.preventDefault()
+  function AddCard(e){
     alert('Usuário cadastrado com sucesso!')
-  }
+    e.preventDefault()
+    const newCard = {
+        nome: localStorage.getItem('Nome'),
+        sobrenome: localStorage.getItem('Sobrenome'),
+        email: localStorage.getItem('Email'),
+        telefone: localStorage.getItem('Telefone'),
+        cep: localStorage.getItem('CEP'),
+        endereco1: localStorage.getItem('Endereço 1'),
+        endereco2: localStorage.getItem('Endereço 2'),
+        nascimento: localStorage.getItem('Nascimento'),
+        cpf: localStorage.getItem('CPF'),
+        renda: localStorage.getItem('Renda Mensal')
+    }
+    setCard(prevState => [...prevState, newCard])
+}
 
   return (
     <div className="App">
@@ -39,19 +42,12 @@ function Cadastrar() {
 
     <div id="card">
 
-    <form action="" method="get" onSubmit={AddUser}>
-
       <h1>Cadastrar</h1>
 
+    <Forms1/>
+    <Forms2/>
+    <Forms3/>
     
-      <Input placeholder="Nome"/>
-      <Input placeholder="Sobrenome"/>
-      <Input placeholder="Email"/>
-      <Input placeholder="Telefone"/>
-    
-      <button type="submit" onClick={Alert} onClick={AddUser}>Próximo</button>
-
-    </form>
 
       </div>
       </main>

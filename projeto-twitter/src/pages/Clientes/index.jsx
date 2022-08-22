@@ -2,19 +2,27 @@ import { useState } from 'react';
 import './index.css';
 import Card from '../../components/cards';
 
+
 function Clientes() {
   const [user, setUser] = useState([])
+  const [card, setCard] = useState([])
 
-  function handleAddUser(event){
-    event.preventDefault()
-    const newUser = {
-      nome: localStorage.getItem('Nome'),
-      sobrenome: localStorage.getItem('Sobrenome'),
-      email: localStorage.getItem('Email'),
-      telefone: localStorage.getItem('Telefone')
+  function AddCard(e){
+    e.preventDefault()
+    const newCard = {
+        nome: localStorage.getItem('Nome'),
+        sobrenome: localStorage.getItem('Sobrenome'),
+        email: localStorage.getItem('Email'),
+        telefone: localStorage.getItem('Telefone'),
+        cep: localStorage.getItem('CEP'),
+        endereco1: localStorage.getItem('Endereço 1'),
+        endereco2: localStorage.getItem('Endereço 2'),
+        nascimento: localStorage.getItem('Nascimento'),
+        cpf: localStorage.getItem('CPF'),
+        renda: localStorage.getItem('Renda Mensal')
     }
-    setUser(prevState => [...prevState, newUser])
-  }
+    setCard(prevState => [...prevState, newCard])
+}
 
   return (
     <div className="App">
@@ -34,9 +42,20 @@ function Clientes() {
     <div id="card">
 
       <h1>Clientes</h1>
-    
-        <Card/>
-
+    {
+    card.map(card => <Card
+                        key={localStorage.getItem('Nome')}
+                        nome={localStorage.getItem('Nome')}
+                        sobrenome={localStorage.getItem('Sobrenome')}
+                        email={localStorage.getItem('Email')}
+                        telefone={localStorage.getItem('Telefone')}
+                        cep={localStorage.getItem('CEP')}
+                        endereco1={localStorage.getItem('Endereço 1')}
+                        endereco2={localStorage.getItem('Endereço 2')}
+                        nascimento={localStorage.getItem('Data de Nascimento')}
+                        cpf={localStorage.getItem('CPF')}
+                        renda={localStorage.getItem('Renda Mensal')}/>)
+    }
       </div>
       </main>
 
