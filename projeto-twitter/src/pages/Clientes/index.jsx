@@ -4,10 +4,8 @@ import Card from '../../components/cards';
 
 
 function Clientes() {
-  const [user, setUser] = useState([])
+ 
   const [card, setCard] = useState([])
-
-  const [items, setItems] = useState([]);
 
   function AddCard(e){
     e.preventDefault()
@@ -24,18 +22,13 @@ function Clientes() {
         renda: localStorage.getItem('Renda Mensal')
       }
 
-  useEffect(() => {
-  const card = JSON.parse(localStorage.getItem('Nome'));
+  useEffect((newCard) => {
+  const card = localStorage.getItem(newCard);
   if (card) {
    setCard(prevstate => [...prevstate, newCard]);
   }
-  }, [newCard]);
+  }, []);
   }
-
-
-
-  
-
 
   return (
     <div className="App">
@@ -56,19 +49,21 @@ function Clientes() {
 
       <h1>Clientes</h1>
     {
-    card.map(card => <Card
-                        key={localStorage.getItem('Nome')}
-                        nome={localStorage.getItem('Nome')}
-                        sobrenome={localStorage.getItem('Sobrenome')}
-                        email={localStorage.getItem('Email')}
-                        telefone={localStorage.getItem('Telefone')}
-                        cep={localStorage.getItem('CEP')}
-                        endereco1={localStorage.getItem('Endereço 1')}
-                        endereco2={localStorage.getItem('Endereço 2')}
-                        nascimento={localStorage.getItem('Data de Nascimento')}
-                        cpf={localStorage.getItem('CPF')}
-                        renda={localStorage.getItem('Renda Mensal')}/>)
+    //card.map(card => <Card
+      //                  key={localStorage.getItem('Nome')}
+        //                nome={localStorage.getItem('Nome')}
+          //              sobrenome={localStorage.getItem('Sobrenome')}
+            //            email={localStorage.getItem('Email')}
+              //          telefone={localStorage.getItem('Telefone')}
+                //        cep={localStorage.getItem('CEP')}
+                  //      endereco1={localStorage.getItem('Endereço 1')}
+                  //      endereco2={localStorage.getItem('Endereço 2')}
+                   //     nascimento={localStorage.getItem('Data de Nascimento')}
+                    //    cpf={localStorage.getItem('CPF')}
+                     //   renda={localStorage.getItem('Renda Mensal')}/>)
     }
+
+    <Card/>
       </div>
       </main>
 

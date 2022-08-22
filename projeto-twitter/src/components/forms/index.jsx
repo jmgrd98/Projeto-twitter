@@ -1,7 +1,6 @@
 import { Input } from "../inputs/Input";
 import { useState } from "react";
-
-import {AddCard} from '../../components/cards/index'
+//import {AddCard} from '../../components/cards/'
 
 export function Forms1(){
     const [userNome, setUserNome] = useState('')
@@ -63,7 +62,7 @@ export function Forms3(){
 
     return(
     <div>
-        <Input placeholder="Data de Nascimento" onChange={e => localStorage.setItem('Nascimento')}/>
+     <Input placeholder="Data de Nascimento" onChange={e => localStorage.setItem('Nascimento')}/>
       <Input placeholder="CPF" onChange={e => localStorage.setItem('CPF')}/>
       <Input placeholder="Renda Mensal" onChange={e => localStorage.setItem('Renda Mensal')}/>
 
