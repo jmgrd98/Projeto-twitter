@@ -23,7 +23,7 @@ function Clientes() {
     
       <aside>
         <nav>
-          <li><a href="/">Cadastrar</a></li>
+          <li><Link to='/perfil'>Cadastrar</a></li>
           <li><a href="/clientes">Clientes</a></li>
         </nav>
       </aside>
