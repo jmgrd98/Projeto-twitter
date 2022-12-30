@@ -1,31 +1,26 @@
-import { useState, useEffect } from 'react';
 import './index.css';
 import Card from '../../components/Card';
 import {Link} from 'react-router-dom'
 
+const cards = [
+  
+]
 
 function Clientes() {
- 
-  const [card, setCard] = useState([])
-
-  useEffect((newCard) => {
-  const card = localStorage.getItem(newCard);
-  if (card) {
-   setCard(prevstate => [...card, newCard]);
-  }
-  }, []);
   
 
   return (
     <div className="App">
 
     <body>
-      
+    
     
       <aside>
         <nav>
-          <li><Link to='/perfil'>Cadastrar</Link></li>
-          <li><a href="/clientes">Clientes</a></li>
+          <ul>
+          <li><Link to='/'>Cadastrar</Link></li>
+          <li><Link to='/clientes'>Clientes</Link></li>
+          </ul>
         </nav>
       </aside>
 
@@ -35,6 +30,18 @@ function Clientes() {
 
       <h1>Clientes</h1>
 
+      <Card
+        name='João Marcelo'
+        surname='Dantas'
+        email='jmgrd98@gmail.com'
+        phone='61 996386998'
+        cep='73255-901'
+        address='Cond. Mansões Entrelagos'
+        address2='etapa 2 conjunto i casa2'
+        birth='01/10/1998'
+        cpf='041.125.851-60'
+        renda='R$2.000'
+      />
    
 
       </div>

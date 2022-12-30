@@ -8,7 +8,7 @@ export default function Routes(){
     <BrowserRouter>
     <Wrapper>
 
-        <Route path="/" element={<Cadastrar/>}/>
+        <Route exact path="/" element={<Cadastrar/>}/>
         <Route path="/clientes" element={<Clientes/>}/>
 
     </Wrapper >
