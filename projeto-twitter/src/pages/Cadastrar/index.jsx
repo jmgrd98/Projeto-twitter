@@ -1,29 +1,29 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import './index.css';
-import {AddCard} from '../../components/cards/index'
+import Card from '../../components/cards/index'
 import {Forms} from '../../components/forms'
 
 function Cadastrar() {
 
-    const[card, setCard] = useState([])
+    // const[card, setCard] = useState([])
 
-  function AddCard(e){
-    alert('Usuário cadastrado com sucesso!')
-    e.preventDefault()
-    const newCard = {
-        nome: localStorage.getItem('Nome'),
-        sobrenome: localStorage.getItem('Sobrenome'),
-        email: localStorage.getItem('Email'),
-        telefone: localStorage.getItem('Telefone'),
-        cep: localStorage.getItem('CEP'),
-        endereco1: localStorage.getItem('Endereço 1'),
-        endereco2: localStorage.getItem('Endereço 2'),
-        nascimento: localStorage.getItem('Nascimento'),
-        cpf: localStorage.getItem('CPF'),
-        renda: localStorage.getItem('Renda Mensal')
-    }
-    setCard(prevState => [...prevState, newCard])
-}
+//   function AddCard(e){
+//     alert('Usuário cadastrado com sucesso!')
+//     e.preventDefault()
+//     const newCard = {
+//         nome: localStorage.getItem('Nome'),
+//         sobrenome: localStorage.getItem('Sobrenome'),
+//         email: localStorage.getItem('Email'),
+//         telefone: localStorage.getItem('Telefone'),
+//         cep: localStorage.getItem('CEP'),
+//         endereco1: localStorage.getItem('Endereço 1'),
+//         endereco2: localStorage.getItem('Endereço 2'),
+//         nascimento: localStorage.getItem('Nascimento'),
+//         cpf: localStorage.getItem('CPF'),
+//         renda: localStorage.getItem('Renda Mensal')
+//     }
+//     // setCard(prevState => [...prevState, newCard])
+// }
 
   return (
     <div className="App">
@@ -45,6 +45,7 @@ function Cadastrar() {
       <h1>Cadastrar</h1>
 
     <Forms/>
+    <Card/>
     
 
       </div>

@@ -1,6 +1,6 @@
-import { Input } from "../inputs/Input";
+import { Input } from "../Input/Input";
 import { useState } from "react";
-//import {AddCard} from '../../components/cards/'
+// import {AddCard} from '../../components/cards/'
 
 export function Forms(){
     const [userNome, setUserNome] = useState('')

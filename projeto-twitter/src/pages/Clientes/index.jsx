@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './index.css';
-import Card from '../../components/cards';
+import Card from '../../components/Card';
+import {Link} from 'react-router-dom'
 
 
 function Clientes() {
@@ -10,7 +11,7 @@ function Clientes() {
   useEffect((newCard) => {
   const card = localStorage.getItem(newCard);
   if (card) {
-   setCard(prevstate => [...prevstate, newCard]);
+   setCard(prevstate => [...card, newCard]);
   }
   }, []);
   
@@ -23,7 +24,7 @@ function Clientes() {
     
       <aside>
         <nav>
-          <li><Link to='/perfil'>Cadastrar</a></li>
+          <li><Link to='/perfil'>Cadastrar</Link></li>
           <li><a href="/clientes">Clientes</a></li>
         </nav>
       </aside>
