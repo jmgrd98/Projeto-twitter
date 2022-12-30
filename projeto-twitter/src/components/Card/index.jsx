@@ -1,19 +1,19 @@
-import './index.css'
+import CardStyle from "./index"
 
 export default function Card(props){
 
     return(
-        <div id="card">
-            <p><span>Nome: </span>{props.name}</p>
-            <p><span>Sobrenome: </span>{props.surname}</p>
-            <p><span>Email: </span>{props.email}</p>
-            <p><span>Telefone: </span>{props.number}</p>
-            <p><span>CEP: </span>{props.cep}</p>
-            <p><span>Endereço 1: </span>{props.address}</p>
-            <p><span>Endereço 2: </span>{props.address2}</p>
-            <p><span>Data de nascimento: </span>{props.birth}</p>
-            <p><span>CPF: </span>{props.cpf}</p>
-            <p><span>Renda Mensal: </span>{props.renda}</p>
-        </div>
+        <CardStyle className="card">
+            <span>Nome: </span><p>{props.name}</p>
+            <span>Sobrenome: </span><p>{props.surname}</p>
+            <span>Email: </span><p>{props.email}</p>
+            <span>Telefone: </span><p>{props.number}</p>
+            <span>CEP: </span><p>{props.cep}</p>
+            <span>Endereço 1: </span><p>{props.address}</p>
+            <span>Endereço 2: </span><p>{props.address2}</p>
+            <span>Data de nascimento: </span><p>{props.birth}</p>
+            <span>CPF: </span><p>{props.cpf}</p>
+            <span>Renda Mensal: </span><p>{props.renda}</p>
+        </CardStyle>
     )
 }

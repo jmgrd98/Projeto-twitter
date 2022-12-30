@@ -1,6 +1,7 @@
 import './index.css';
 import Form from '../../components/Form';
 import Card from '../../components/Card';
+import {Link} from 'react-router-dom'
 
 
 function Cadastrar() {
@@ -15,8 +16,10 @@ function Cadastrar() {
     
       <aside>
         <nav>
-          <li><a href="/">Cadastrar</a></li>
-          <li><a href="/clientes">Clientes</a></li>
+          <ul>
+          <li><Link to='/'>Cadastrar</Link></li>
+          <li><Link to="/clientes">Clientes</Link></li>
+          </ul>
         </nav>
       </aside>
 
