@@ -34,8 +34,7 @@ function Clientes() {
     <div id="card">
 
       <h1>Clientes</h1>
-    
-    <Card/>  
+
    
 
       </div>

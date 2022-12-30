@@ -1,9 +1,6 @@
-import { useState } from 'react';
-import './Input.css'
+import './index.css'
 
-export function Input(props){
-
-  const [input, setInput] = useState('')
+export default function Input(props){
 
 return(
 
