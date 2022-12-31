@@ -25,7 +25,7 @@ function Cadastrar() {
 
       <main>
 
-    <div id="card">
+    <div className='card'>
 
       <h1>Cadastrar</h1>
 

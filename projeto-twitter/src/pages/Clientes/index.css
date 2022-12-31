@@ -24,7 +24,7 @@ main{
   padding: 50px;
 }
 
-#card{
+.card{
   background-color: white;
   padding: 20px;
   border-radius: 20px;

@@ -1,4 +1,5 @@
 import Input from "../Input"
+import './index.css'
 // import {AddCard} from '../../components/cards/'
 
 export default function Form(){
@@ -27,16 +28,16 @@ export default function Form(){
    return(
     
     <div id="step1">
-        <Input placeholder="Nome" />
-        <Input placeholder="Sobrenome" />
-        <Input placeholder="Email" />
-        <Input placeholder="Telefone"/>
-        <Input placeholder="CEP" />
-        <Input placeholder="Endereço 1" />
-        <Input placeholder="Endereço 2" />
-        <Input placeholder="CPF" />
-        <Input placeholder="Nascimento" />
-      ` <Input placeholder="Renda Mensal" />
+        <Input placeholder="Nome: " />
+        <Input placeholder="Sobrenome: " />
+        <Input placeholder="Email: " />
+        <Input placeholder="Telefone: "/>
+        <Input placeholder="CEP: " />
+        <Input placeholder="Endereço 1: " />
+        <Input placeholder="Endereço 2: " />
+        <Input placeholder="CPF: " />
+        <Input placeholder="Nascimento: " />
+        <Input placeholder="Renda Mensal: " />
       <button id="button" type="button" onClick={Alert}>Próximo</button>
     </div>
    )

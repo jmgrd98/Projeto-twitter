@@ -26,7 +26,7 @@ function Clientes() {
 
       <main>
 
-    <div id="card">
+    <div className='card'>
 
       <h1>Clientes</h1>
 
